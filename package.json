@@ -1,0 +1,14 @@
+{
+  "name": "knex-esm",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "db:migrate:work": "DEBUG=knex.* knex --esm --knexfile knexfile.js migrate:latest",
+    "db:migrate:does-not-work": "DEBUG=knex.* knex --esm --knexfile db/knexfile.js migrate:latest"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0"
+  }
+}
